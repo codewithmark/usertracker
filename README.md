@@ -1,4 +1,4 @@
- # UserTracker.js
+# UserTracker.js
 
 A simple, privacy-conscious JavaScript user tracking utility for web projects. Collects basic user information (browser, OS, device, IP/location, screen, timezone, language, referrer, and user agent) **only if the user has given consent**.
 
@@ -14,16 +14,24 @@ A simple, privacy-conscious JavaScript user tracking utility for web projects. C
    ```html
    <script src="tracker.js"></script>
    ```
-2. **Get tracking info**:
+2. **Set user consent** (example):
    ```js
-   UserTracker.then(data => {
-     if (data) {
-       console.log("Tracking Info:", data);
-     } else {
-       console.log("Tracking not performed (no consent)");
-     }
-   });
+   // Set consent (e.g., after user accepts cookies)
+   window.localStorage.setItem('trackingConsent', 'true');
    ```
+
+3. **Get tracking info**:
+
+**Promise-style (recommended):**
+```js
+UserTracker.then(data => {
+  if (data) {
+    console.log("Tracking Info:", data);
+  } else {
+    console.log("Tracking not performed (no consent)");
+  }
+});
+```
 
 ## Example Output
 ```json
