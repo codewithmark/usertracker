@@ -16,7 +16,7 @@ A simple, privacy-conscious JavaScript user tracking utility for web projects. C
    ```
 2. **Get tracking info**:
    ```js
-   UserTracker.getUserTrackingInfo().then(data => {
+   UserTracker.then(data => {
      if (data) {
        console.log("Tracking Info:", data);
      } else {
