@@ -14,12 +14,7 @@ A simple, privacy-conscious JavaScript user tracking utility for web projects. C
    ```html
    <script src="tracker.js"></script>
    ```
-2. **Set user consent** (example):
-   ```js
-   // Set consent (e.g., after user accepts cookies)
-   window.localStorage.setItem('trackingConsent', 'true');
-   ```
-3. **Get tracking info**:
+2. **Get tracking info**:
    ```js
    UserTracker.getUserTrackingInfo().then(data => {
      if (data) {
