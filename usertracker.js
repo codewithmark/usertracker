@@ -1,8 +1,19 @@
+/*
+  
+  UserTracker.js - Get user geo and device info
+  
+  Documentation: https://github.com/codewithmark/usertracker
 
-// tracker.js
+  Website: https://codewithmark.com/
+
+*/
 
 
 class UserTracker {
+  // Allow UserTracker.then(...) to work like a Promise
+  static then(onFulfilled, onRejected) {
+    return this.getUserTrackingInfo().then(onFulfilled, onRejected);
+  }
   // Consent check
   static hasUserConsented() {
     // Replace with your real consent logic (e.g., check cookie/localStorage)
