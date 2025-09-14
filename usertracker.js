@@ -92,7 +92,7 @@ class UserTracker {
       screen: screenSize,
       timezone: timezone,
       language: navigator.language || "N/A",
-      referrer: document.referrer || "Direct or unknown",
+      referrer: document.referrer || "Direct",
       userAgent: navigator.userAgent
     };
   }
